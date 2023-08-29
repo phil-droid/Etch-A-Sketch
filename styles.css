@@ -26,6 +26,7 @@ h1 {
     width: 1200px;
     height: 1200px;
     justify-content: center; /* Center the grid horizontally */
+    margin-bottom: 20px; /* Added margin to separate grid from reset button */  
 }
 
 /* Style for the grid squares */
@@ -39,11 +40,19 @@ h1 {
 
 /* Add hover effect on grid squares */
 .square:hover {
-    background-color: black;
+    background-color: rgb(166, 252, 54);
+}
+#reset {
+    margin-top: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: bisque;
+    cursor: pointer;
+    color: black;
 }
 
-/* Add styling for the button */
-#renew-button {
-    margin-bottom: 20px;
+#reset:hover {
+    background-color: cyan;
 }
-
