@@ -1,18 +1,25 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.getElementById('new-grid').addEventListener('click', function() {
+    // Get the number of squares per side from the user
+    const numberOfSquares = parseInt(prompt('Enter the number of squares for the new grid (max 100):'));
 
-    // Getting the container element
+    // Check if the number is valid
+    if (numberOfSquares < 1 || numberOfSquares > 100) {
+        alert('Invalid number of squares per side.');
+        return;
+    }
+
+    // Remove the existing grid
     const container = document.getElementById('container');
+    container.innerHTML = '';
 
-    // Creating 16x16 grid
-    for (let i = 0; i < 16; i++) {
-        for (let j = 0; j < 16; j++) {
+    // Create a new grid
+    for (let i = 0; i < numberOfSquares; i++) {
+        for (let j = 0; j < numberOfSquares; j++) {
             const square = document.createElement('div');
             square.classList.add('square');
+            //square.style.backgroundColor = rgb(random(), random(), random());
             container.appendChild(square);
         }
     }
-
-    // Adding the container class to the container element
     container.classList.add('container');
-
 });
